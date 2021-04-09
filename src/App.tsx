@@ -3,7 +3,7 @@ import { ReactElement } from "react";
 
 const App = (): ReactElement => {
   return (
-   <h1>react</h1>
+   <h1>ts goes herre</h1>
   );
 };
 

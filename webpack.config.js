@@ -24,7 +24,6 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
-  mode:'development',
   watch:true,
   output: {
     filename: 'bundle.js',
