@@ -1,20 +1,22 @@
-const express = require('express')
+const express = require("express");
 const path = require("path");
-const searchApi = require('./api/search');
+const searchApi = require("./api/search");
+const artistApi = require("./api/artist");
 
 const app = express();
 const port = 3000;
 
-require('./middleware')(app);
+require("./middleware")(app);
 
-app.use('/api/search', searchApi);
+app.use("/api/search", searchApi);
+app.use("/api/artist", artistApi);
 
-app.use('/public', express.static('../dist'));
+app.use("/public", express.static("../dist"));
 
-app.get("/", (req, res, next) => {
-   res.sendFile(path.join(__dirname, "../", "index.html"));
- });
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../", "index.html"));
+});
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+  console.log(`App listening at http://localhost:${port}`);
+});

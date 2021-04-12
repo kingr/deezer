@@ -47,7 +47,7 @@ exports.getArtists = function (req, res, next) {
   }
 };
 
-exports.getArtistFanCount = function (req, res, next) {
+exports.getArtistFanCount = function (req, res) {
   try {
     async function getFanCount() {
       return await Promise.all(
