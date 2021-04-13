@@ -1,0 +1,124 @@
+@import "../tools/tools.mixins";
+
+%content__first-element-default {
+  margin: 16px 0 8px 0;
+}
+
+.lc-card-lg {
+  @include r(1024) {
+    display: flex;
+  }
+  &__image {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    @include r(1024) {
+      margin-right: 52px;
+      max-width: 500px;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-height: 260px;
+
+    &__heading {
+      @include geomanist-medium;
+      margin-bottom: 8px;
+      font-size: $body3;
+      color: $black-2;
+      letter-spacing: 0;
+      @include r(1024) {
+        font-size: $body4;
+        line-height: 32px;
+        margin-bottom: 12px;
+      }
+    }
+
+    &__link--center {
+      text-align: center;
+    }
+
+    &__first-element {
+      @extend %content__first-element-default;
+
+      &--datetime {
+        @extend %content__first-element-default;
+        @include geomanist-medium;
+        letter-spacing: 0;
+        color: $red-6;
+
+        @include r(1024) {
+          font-size: $body2;
+        }
+      }
+
+      @include r(1024) {
+        margin-bottom: 12px;
+      }
+    }
+
+    &__desc {
+      // style plain text description
+      @include cargo_cult_multiline_elision($body2, 1.5, 1.2, 4);
+      color: $black-5;
+      @include geomanist-regular;
+      letter-spacing: 0;
+
+      // style HTML description
+      :not(:first-child) {
+        display: none;
+      }
+      :first-child {
+        @include cargo_cult_multiline_elision($body2, 1.5, 1.2, 4);
+        color: $black-5;
+        @include geomanist-regular;
+        letter-spacing: 0;
+      }
+    }
+
+    &__cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 17px;
+
+      @include r(1024) {
+        flex-direction: row;
+      }
+
+      &__link {
+        @include geomanist-book;
+        font-size: $body1;
+        letter-spacing: 0;
+        line-height: 24px;
+        padding-top: 15px;
+        text-decoration: underline;
+
+        @include r(1024) {
+          padding-top: 0;
+          margin-left: 17px;
+        }
+
+        &--left {
+          align-self: flex-start;
+        }
+      }
+
+      &__btn {
+        width: 100%;
+        box-shadow: none;
+        @include r(1024) {
+          width: auto;
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

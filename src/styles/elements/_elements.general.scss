@@ -1,0 +1,10 @@
+body {
+  @include geomanist-regular;
+  height: 100%;
+  margin: 0;
+  font-size: $body1;
+}
+
+strong {
+  font-weight: bold;
+}

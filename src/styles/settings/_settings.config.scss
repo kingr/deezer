@@ -1,0 +1,10 @@
+$config: (
+  project: "client-portal",
+  env: "dev",
+  debug: false,
+);
+
+// USAGE: @if (config(debug) == true) { ... }
+@function config($key) {
+  @return map-get($config, $key);
+}

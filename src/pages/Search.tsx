@@ -1,4 +1,5 @@
 import React from "react";
+import SearchBar from "../components/SearchBar";
 
 const SearchPage = () => {
   // const { loading, error, data } = useQuery(getUser);
@@ -7,7 +8,11 @@ const SearchPage = () => {
   //   return <RenderLoader />;
   // }
 
-  return <h1>search page</h1>;
+  return (
+    <>
+      <SearchBar />
+    </>
+  );
 };
 
 export default SearchPage;

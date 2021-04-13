@@ -1,0 +1,71 @@
+.ant-form label {
+  @include geomanist-book;
+  line-height: 18px;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+  display: block;
+
+  + input {
+    margin-bottom: 12px;
+  }
+}
+
+.ant-form .ant-checkbox-wrapper {
+  @include geomanist-regular;
+  color: rgba($black, 0.87);
+}
+
+.ant-collapse {
+  .accordion-expand-icon {
+    color: $primary !important;
+    font-size: 18px !important;
+    transition: linear;
+    transition: linear 0.2s;
+    transform: none !important;
+    top: 15px !important;
+
+    &--open {
+      transform: rotate(90deg) !important;
+    }
+  }
+}
+
+.react-select-container {
+  .react-select__control {
+    border-color: $white5;
+    &:hover {
+      border-color: $primary;
+      box-shadow: none;
+    }
+    &:focus {
+      border-color: $white5;
+      box-shadow: none;
+    }
+  }
+  .css-1pahdxg-control {
+    box-shadow: none;
+    border-color: $primary;
+  }
+  .react-select__menu {
+    .react-select__menu-list {
+      .react-select__option {
+        background-color: $white;
+        color: #000;
+        &:focus {
+          background-color: $primary;
+          border-color: $white5;
+        }
+        &:hover {
+          background-color: $primary;
+          border-color: $white5 !important;
+          box-shadow: none !important;
+          color: $white;
+        }
+      }
+      .react-select__option--is-selected {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+}

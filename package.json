@@ -23,7 +23,8 @@
     "seamless-immutable": "^7.1.4"
   },
   "scripts": {
-    "dev": "webpack --config webpack.config.js"
+    "dev": "webpack --config webpack.config.js",
+    "sass:watch": "sass --watch src/styles/main.scss:./dist/main.css"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.14",

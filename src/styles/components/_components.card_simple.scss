@@ -1,0 +1,359 @@
+@import "../tools/tools.functions";
+
+.featured-tool__simple-card {
+  height: 224px;
+  .ant-card-body {
+    height: 80%;
+    .ant-card-meta-description {
+      @include trim(4);
+    }
+  }
+  .ant-card-actions {
+    height: 20%;
+  }
+}
+
+.simple-card {
+  &--disabled {
+    opacity: 0.4;
+  }
+
+  &__body {
+    &--sm {
+      .ant-card-body {
+        padding: 16px;
+        @include r(1024) {
+          padding: 30px;
+        }
+      }
+    }
+    .ant-card-body {
+      padding: 20px;
+      @include r(1024) {
+        padding: 30px;
+      }
+
+      .simple-card {
+        .ant-card-body {
+          padding: 0;
+          padding-bottom: 24px;
+        }
+
+        &:last-child {
+          .ant-card-body {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__empty {
+    display: flex;
+    flex-direction: column;
+
+    &--center {
+      align-items: center;
+    }
+
+    &--mt-60 {
+      margin-top: 0;
+      @include r(1024) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
+    }
+
+    .title {
+      color: $black;
+      @include geomanist-book;
+      font-size: $body1;
+      letter-spacing: 0px;
+      line-height: 22px;
+      text-align: left;
+      margin-top: 12px;
+      @include r(1024) {
+        text-align: center;
+      }
+    }
+
+    .desc {
+      color: $black-5;
+      @include geomanist-regular;
+      font-size: $body1;
+      letter-spacing: 0px;
+      line-height: 22px;
+      text-align: center;
+    }
+
+    .link {
+      @include geomanist-book;
+      font-size: $body1;
+      letter-spacing: 0px;
+      line-height: 20px;
+    }
+
+    .recc-card {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid $white5;
+      border-radius: 0;
+
+      .top-section {
+        padding: 0;
+        &.extra-bottom-padding {
+          padding: 0;
+        }
+        .top-section-inner {
+          padding-right: 0px;
+          .recomm-status-wrapper {
+            .recomm-status {
+              font-size: 12px;
+              @include r(1024) {
+                font-size: $body1;
+              }
+            }
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+          .title {
+            font-size: $body1;
+          }
+        }
+      }
+      .recomm-preview-actions {
+        background: transparent;
+        padding: 0;
+        padding-bottom: 16px;
+        float: right;
+        @include r(1024) {
+          padding-bottom: 0;
+          background: inherit;
+          float: none;
+        }
+      }
+    }
+
+    img {
+      height: 90px;
+      width: 90px;
+      @include r(1024) {
+        height: 70px;
+        width: 77px;
+      }
+    }
+
+    &__banner {
+      background: $blue-5;
+      border-radius: 4px;
+      padding: 14px;
+      margin-bottom: 30px;
+      width: 100%;
+      text-align: center;
+    }
+    &__text {
+      color: $black-5;
+      @include geomanist-book;
+      font-size: $body;
+      line-height: 18px;
+    }
+
+    &__more {
+      color: $black-2;
+      @include geomanist-book;
+      font-size: $body1;
+      font-weight: 300;
+      line-height: 22px;
+      text-align: right;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+
+    &--center {
+      align-items: center;
+    }
+
+    &--mt-60 {
+      margin-top: 0;
+      @include r(1024) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
+    }
+
+    .title {
+      color: $black;
+      @include geomanist-book;
+      font-size: $body1;
+      letter-spacing: 0px;
+      line-height: 22px;
+      text-align: left;
+      margin-top: 12px;
+      @include r(1024) {
+        text-align: center;
+      }
+    }
+
+    .desc {
+      color: $black-5;
+      @include geomanist-regular;
+      font-size: $body1;
+      letter-spacing: 0px;
+      line-height: 22px;
+      text-align: center;
+    }
+
+    .link {
+      @include geomanist-book;
+      font-size: $body1;
+      letter-spacing: 0px;
+      line-height: 20px;
+    }
+
+    .recc-card {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid $white5;
+      border-radius: 0;
+      .top-section {
+        padding: 0;
+        &.extra-bottom-padding {
+          padding: 0;
+        }
+        .top-section-inner {
+          padding-right: 0px;
+          .recomm-status-wrapper {
+            .recomm-status {
+              font-size: 12px;
+              @include r(1024) {
+                font-size: $body1;
+              }
+            }
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+          .title {
+            font-size: $body1;
+          }
+        }
+      }
+      .recomm-preview-actions {
+        background: transparent;
+        padding: 0;
+        padding-bottom: 16px;
+        float: right;
+        @include r(1024) {
+          padding-bottom: 0;
+          background: inherit;
+          float: none;
+        }
+      }
+    }
+
+    img {
+      height: 50px;
+      width: 50px;
+      @include r(1024) {
+        height: 70px;
+        width: 77px;
+      }
+    }
+
+    &__banner {
+      background: $blue-5;
+      border-radius: 4px;
+      padding: 14px;
+      margin-bottom: 30px;
+      width: 100%;
+      text-align: center;
+    }
+    &__text {
+      color: $black-5;
+      @include geomanist-book;
+      font-size: $body;
+      line-height: 18px;
+    }
+
+    &__more {
+      color: $black-2;
+      @include geomanist-book;
+      font-size: $body1;
+      font-weight: 300;
+      line-height: 22px;
+      text-align: right;
+    }
+  }
+
+  &__meta {
+    .ant-card-meta-title {
+      @include geomanist-book;
+      font-size: 14px;
+      @include r(1024) {
+        font-size: $h5;
+      }
+    }
+  }
+
+  &__avatar-img {
+    img {
+      height: 75px;
+      width: 75px;
+      @include r(1024) {
+        height: 100px;
+        width: 100px;
+      }
+    }
+  }
+
+  &.ant-card {
+    border-radius: 4px;
+  }
+
+  &.ant-card-bordered {
+    border: 1px solid $white5;
+  }
+
+  .ant-card-actions {
+    background: transparent;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+
+    > li {
+      @include geomanist-book;
+      font-size: $body2;
+      border-right: none;
+      @extend .w-65;
+      @include r(1024) {
+        width: inherit;
+      }
+
+      span a {
+        color: $green-5;
+        text-align: left;
+      }
+
+      &:nth-child(2) {
+        @extend .w-35;
+        text-align: left;
+      }
+    }
+  }
+
+  &.width-100 {
+    .ant-card-actions {
+      > li {
+        @extend .w-100;
+      }
+    }
+  }
+
+  &__link {
+    &--disabled {
+      pointer-events: none;
+    }
+  }
+}

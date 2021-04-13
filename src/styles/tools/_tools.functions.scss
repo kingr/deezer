@@ -1,0 +1,17 @@
+// Ick!
+// https://elad.medium.com/trimming-multi-lines-in-css-5ae59d5e6d84
+// https://caniuse.com/?search=line-clamp
+// TODO: consolidate with lc-card-lg__content__desc style
+@mixin trim($numLines: null) {
+  @if $numLines != null {
+    display: -webkit-box;
+    -webkit-line-clamp: $numLines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  } @else {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+  }
+}

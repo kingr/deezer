@@ -1,0 +1,185 @@
+.recc-card {
+  background-color: $white;
+  border: 1px solid $white5;
+  border-radius: 4px;
+  margin-bottom: 18px;
+
+  @include r(1024) {
+    width: 72%;
+    max-width: 714px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+  }
+
+  .top-section {
+    padding: 14px 14px 0 14px;
+    display: flex;
+    justify-content: space-between;
+
+    @include r(1024) {
+      padding: 14px 14px 0 25px;
+      order: 1;
+      flex: 1 1 150px;
+    }
+
+    .success-check {
+      display: flex;
+      fill: $green-4;
+      align-self: center;
+    }
+
+    .submitted-hourglass {
+      display: flex;
+      fill: $blue-2;
+      align-self: center;
+    }
+
+    .waiting {
+      display: flex;
+      fill: $blue-1;
+      align-self: center;
+    }
+
+    .top-section-inner {
+      padding-right: 10px;
+      .recomm-status-wrapper {
+        margin-bottom: 10px;
+        display: flex;
+
+        @include r(1024) {
+          margin-top: 10px;
+        }
+
+        .recomm-status {
+          @include geomanist-book;
+          border-radius: 2px;
+          border: 1px solid;
+          padding: 3px 7px;
+          text-transform: capitalize;
+
+          &.accepted {
+            border-color: $green-2;
+            background: $white3;
+            color: $green-3;
+          }
+
+          &.waiting,
+          &.Actionneeded,
+          &.Submitted {
+            border-color: $blue-3;
+            background: $blue-4;
+            color: $blue-1;
+          }
+
+          &.completed {
+            border-color: $orange-1;
+            background: $white-1;
+            color: $orange-1;
+          }
+
+          &.Inprogress {
+            border-color: $orange-1;
+            background: $white-1;
+            color: $orange-1;
+          }
+
+          &.Rejectedbyyou,
+          &.removed,
+          &.superceded,
+          &.duplicate {
+            border-color: $red-3;
+            background: $red-light;
+            color: $red-2;
+          }
+        }
+      }
+
+      .title {
+        font-size: $body2;
+        line-height: 22px;
+        margin-bottom: 20px;
+        @include geomanist-book;
+        color: rgba($black, 0.87);
+
+        @include r(1024) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    &.extra-bottom-padding {
+      padding-bottom: 15px;
+    }
+  }
+
+  .middle-section {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px 0;
+
+    @include r(1024) {
+      order: 3;
+      padding-top: 0;
+    }
+  }
+
+  .recomm-preview-actions {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 20px;
+    background: $white4;
+    border-radius: 0 0 4px 4px;
+
+    &.two-col {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    .half-size-btn {
+      width: calc(50% - 5px);
+    }
+
+    .apply-btn {
+      text-decoration: none;
+    }
+
+    @include r(1024) {
+      order: 2;
+      padding: 12px;
+      background: none;
+      flex: 0 0 170px;
+    }
+  }
+
+  &:hover {
+    background-color: rgba($turquoise-light, 0.2);
+    border-color: $turquoise-light;
+  }
+
+  .recc-param-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+
+    &.inactive {
+      opacity: 0.6;
+    }
+
+    .recc-param-text {
+      font-size: $body1;
+      color: rgba($black, 0.6);
+    }
+
+    .recc-param-edit {
+      display: flex;
+
+      .recc-edit-actions {
+        margin-left: 5px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

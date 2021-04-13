@@ -1,0 +1,313 @@
+@font-face {
+  font-family: "Geomanist-Regular";
+  src: url("../../public/fonts/Geomanist-Regular-Webfont/geomanist-regular-webfont.eot");
+  src: url("../../public/fonts/Geomanist-Regular-Webfont/geomanist-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-Regular-Webfont/geomanist-regular-webfont.woff2")
+      format("woff2"),
+    url("../../public/fonts/Geomanist-Regular-Webfont/geomanist-regular-webfont.woff")
+      format("woff"),
+    url("../../public/fonts/Geomanist-Regular-Webfont/geomanist-regular-webfont.ttf")
+      format("truetype"),
+    url("../../public/fonts/Geomanist-Regular-Webfont/geomanist-regular-webfont.svg#webfont")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Regular-Italic";
+  src: url("../../public/fonts/Geomanist-Regular-Italic/geomanist-regular-italic-webfont.eot");
+  src: url("../../public/fonts/Geomanist-Regular-Italic/geomanist-regular-italic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-Regular-Italic/geomanist-regular-italic-webfont.woff2")
+      format("woff2"),
+    url("../../public/fonts/Geomanist-Regular-Italic/geomanist-regular-italic-webfont.woff")
+      format("woff"),
+    url("../../public/fonts/Geomanist-Regular-Italic/geomanist-regular-italic-webfont.ttf")
+      format("truetype"),
+    url("../../public/fonts/Geomanist-Regular-Italic/geomanist-regular-italic-webfont.svg#webfont")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Black-Italic";
+  src: url("../../public/fonts/Geomanist-Black-Italic-Webfont/geomanist-black-italic-webfont.eot");
+  src: url("../../public/fonts/Geomanist-Black-Italic-Webfont/geomanist-black-italic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-Black-Italic-Webfont/geomanist-black-italic-webfont.woff2")
+      format("woff2"),
+    url("../../public/fonts/Geomanist-Black-Italic-Webfont/geomanist-black-italic-webfont.woff")
+      format("woff"),
+    url("../../public/fonts/Geomanist-Black-Italic-Webfont/geomanist-black-italic-webfont.ttf")
+      format("truetype"),
+    url("../../public/fonts/Geomanist-Black-Italic-Webfont/geomanist-black-italic-webfont.svg#webfont")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Black";
+  src: url("../../public/fonts/Geomanist-Black-Webfont/geomanist-black-webfont.eot");
+  src: url("../../public/fonts/Geomanist-Black-Webfont/geomanist-black-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-Black-Webfont/geomanist-black-webfont.woff2") format("woff2"),
+    url("../../public/fonts/Geomanist-Black-Webfont/geomanist-black-webfont.woff") format("woff"),
+    url("../../public/fonts/Geomanist-Black-Webfont/geomanist-black-webfont.ttf") format("truetype"),
+    url("../../public/fonts/Geomanist-Black-Webfont/geomanist-black-webfont.svg#webfont")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Bold-Italic";
+  src: url("../../public/fonts/Geomanist-Bold-Italic-Webfont/geomanist-bold-italic-webfont.eot");
+  src: url("../../public/fonts/Geomanist-Bold-Italic-Webfont/geomanist-bold-italic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-Bold-Italic-Webfont/geomanist-bold-italic-webfont.woff2")
+      format("woff2"),
+    url("../../public/fonts/Geomanist-Bold-Italic-Webfont/geomanist-bold-italic-webfont.woff")
+      format("woff"),
+    url("../../public/fonts/Geomanist-Bold-Italic-Webfont/geomanist-bold-italic-webfont.ttf")
+      format("truetype"),
+    url("../../public/fonts/Geomanist-Bold-Italic-Webfont/geomanist-bold-italic-webfont.svg#webfont")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Bold";
+  src: url("../../public/fonts/Geomanist-Bold-Webfont/geomanist-bold-webfont.eot");
+  src: url("../../public/fonts/Geomanist-Bold-Webfont/geomanist-bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-Bold-Webfont/geomanist-bold-webfont.woff2") format("woff2"),
+    url("../../public/fonts/Geomanist-Bold-Webfont/geomanist-bold-webfont.woff") format("woff"),
+    url("../../public/fonts/Geomanist-Bold-Webfont/geomanist-bold-webfont.ttf") format("truetype"),
+    url("../../public/fonts/Geomanist-Bold-Webfont/geomanist-bold-webfont.svg#webfont")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Book-Italic";
+  src: url("../../public/fonts/Geomanist-Book-Italic-Webfont/geomanist-book-italic-webfont.eot");
+  src: url("../../public/fonts/Geomanist-Book-Italic-Webfont/geomanist-book-italic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-Book-Italic-Webfont/geomanist-book-italic-webfont.woff2")
+      format("woff2"),
+    url("../../public/fonts/Geomanist-Book-Italic-Webfont/geomanist-book-italic-webfont.woff")
+      format("woff"),
+    url("../../public/fonts/Geomanist-Book-Italic-Webfont/geomanist-book-italic-webfont.ttf")
+      format("truetype"),
+    url("../../public/fonts/Geomanist-Book-Italic-Webfont/geomanist-book-italic-webfont.svg#webfont")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Book";
+  src: url("../../public/fonts/Geomanist-Book-Webfont/geomanist-book-webfont.eot");
+  src: url("../../public/fonts/Geomanist-Book-Webfont/geomanist-book-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-Book-Webfont/geomanist-book-webfont.woff2") format("woff2"),
+    url("../../public/fonts/Geomanist-Book-Webfont/geomanist-book-webfont.woff") format("woff"),
+    url("../../public/fonts/Geomanist-Book-Webfont/geomanist-book-webfont.ttf") format("truetype"),
+    url("../../public/fonts/Geomanist-Book-Webfont/geomanist-book-webfont.svg#webfont")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Extra-Light-Italic";
+  src: url("../../public/fonts/Geomanist-ExtraLight-Italic/geomanist-extralight-italic-webfont.eot");
+  src: url("../../public/fonts/Geomanist-ExtraLight-Italic/geomanist-extralight-italic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-ExtraLight-Italic/geomanist-extralight-italic-webfont.woff2")
+      format("woff2"),
+    url("../../public/fonts/Geomanist-ExtraLight-Italic/geomanist-extralight-italic-webfont.woff")
+      format("woff"),
+    url("../../public/fonts/Geomanist-ExtraLight-Italic/geomanist-extralight-italic-webfont.ttf")
+      format("truetype"),
+    url("../../public/fonts/Geomanist-ExtraLight-Italic/geomanist-extralight-italic-webfont.svg#webfont")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Extra-Light";
+  src: url("../../public/fonts/Geomanist-ExtraLight-Webfont/geomanist-extralight-webfont.eot");
+  src: url("../../public/fonts/Geomanist-ExtraLight-Webfont/geomanist-extralight-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-ExtraLight-Webfont/geomanist-extralight-webfont.woff2")
+      format("woff2"),
+    url("../../public/fonts/Geomanist-ExtraLight-Webfont/geomanist-extralight-webfont.woff")
+      format("woff"),
+    url("../../public/fonts/Geomanist-ExtraLight-Webfont/geomanist-extralight-webfont.ttf")
+      format("truetype"),
+    url("../../public/fonts/Geomanist-ExtraLight-Webfont/geomanist-extralight-webfont.svg#webfont")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Light";
+  src: url("../../public/fonts/Geomanist-Light-Webfont/geomanist-light-webfont.eot");
+  src: url("../../public/fonts/Geomanist-Light-Webfont/geomanist-light-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-Light-Webfont/geomanist-light-webfont.woff2") format("woff2"),
+    url("../../public/fonts/Geomanist-Light-Webfont/geomanist-light-webfont.woff") format("woff"),
+    url("../../public/fonts/Geomanist-Light-Webfont/geomanist-light-webfont.ttf") format("truetype"),
+    url("../../public/fonts/Geomanist-Light-Webfont/geomanist-light-webfont.svg#webfont")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Light-Italic";
+  src: url("../../public/fonts/Geomanist-Light-Italic/geomanist-light-italic-webfont.eot");
+  src: url("../../public/fonts/Geomanist-Light-Italic/geomanist-light-italic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-Light-Italic/geomanist-light-italic-webfont.woff2")
+      format("woff2"),
+    url("../../public/fonts/Geomanist-Light-Italic/geomanist-light-italic-webfont.woff")
+      format("woff"),
+    url("../../public/fonts/Geomanist-Light-Italic/geomanist-light-italic-webfont.ttf")
+      format("truetype"),
+    url("../../public/fonts/Geomanist-Light-Italic/geomanist-light-italic-webfont.svg#webfont")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Medium";
+  src: url("../../public/fonts/Geomanist-Medium/geomanist-medium-webfont.eot");
+  src: url("../../public/fonts/Geomanist-Medium/geomanist-medium-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-Medium/geomanist-medium-webfont.woff2") format("woff2"),
+    url("../../public/fonts/Geomanist-Medium/geomanist-medium-webfont.woff") format("woff"),
+    url("../../public/fonts/Geomanist-Medium/geomanist-medium-webfont.ttf") format("truetype"),
+    url("../../public/fonts/Geomanist-Medium/geomanist-medium-webfont.svg#webfont") format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Medium-Italic";
+  src: url("../../public/fonts/Geomanist-Medium-Italic/geomanist-medium-italic-webfont.eot");
+  src: url("../../public/fonts/Geomanist-Medium-Italic/geomanist-medium-italic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-Medium-Italic/geomanist-medium-italic-webfont.woff2")
+      format("woff2"),
+    url("../../public/fonts/Geomanist-Medium-Italic/geomanist-medium-italic-webfont.woff")
+      format("woff"),
+    url("../../public/fonts/Geomanist-Medium-Italic/geomanist-medium-italic-webfont.ttf")
+      format("truetype"),
+    url("../../public/fonts/Geomanist-Medium-Italic/geomanist-medium-italic-webfont.svg#webfont")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Thin";
+  src: url("../../public/fonts/Geomanist-Thin/geomanist-thin-webfont.eot");
+  src: url("../../public/fonts/Geomanist-Thin/geomanist-thin-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-Thin/geomanist-thin-webfont.woff2") format("woff2"),
+    url("../../public/fonts/Geomanist-Thin/geomanist-thin-webfont.woff") format("woff"),
+    url("../../public/fonts/Geomanist-Thin/geomanist-thin-webfont.ttf") format("truetype"),
+    url("../../public/fonts/Geomanist-Thin/geomanist-thin-webfont.svg#webfont") format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Thin-Italic";
+  src: url("../../public/fonts/Geomanist-Thin-Italic/geomanist-thin-italic-webfont.eot");
+  src: url("../../public/fonts/Geomanist-Thin-Italic/geomanist-thin-italic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-Thin-Italic/geomanist-thin-italic-webfont.woff2")
+      format("woff2"),
+    url("../../public/fonts/Geomanist-Thin-Italic/geomanist-thin-italic-webfont.woff")
+      format("woff"),
+    url("../../public/fonts/Geomanist-Thin-Italic/geomanist-thin-italic-webfont.ttf")
+      format("truetype"),
+    url("../../public/fonts/Geomanist-Thin-Italic/geomanist-thin-italic-webfont.svg#webfont")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Ultra";
+  src: url("../../public/fonts/Geomanist-Ultra/geomanist-ultra-webfont.eot");
+  src: url("../../public/fonts/Geomanist-Ultra/geomanist-ultra-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-Ultra/geomanist-ultra-webfont.woff2") format("woff2"),
+    url("../../public/fonts/Geomanist-Ultra/geomanist-ultra-webfont.woff") format("woff"),
+    url("../../public/fonts/Geomanist-Ultra/geomanist-ultra-webfont.ttf") format("truetype"),
+    url("../../public/fonts/Geomanist-Ultra/geomanist-ultra-webfont.svg#webfont") format("svg");
+}
+
+@font-face {
+  font-family: "Geomanist-Ultra-Italic";
+  src: url("../../public/fonts/Geomanist-Ultra-Italic/geomanist-ultra-italic-webfont.eot");
+  src: url("../../public/fonts/Geomanist-Ultra-Italic/geomanist-ultra-italic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/Geomanist-Ultra-Italic/geomanist-ultra-italic-webfont.woff2")
+      format("woff2"),
+    url("../../public/fonts/Geomanist-Ultra-Italic/geomanist-ultra-italic-webfont.woff")
+      format("woff"),
+    url("../../public/fonts/Geomanist-Ultra-Italic/geomanist-ultra-italic-webfont.ttf")
+      format("truetype"),
+    url("../../public/fonts/Geomanist-Ultra-Italic/geomanist-ultra-italic-webfont.svg#webfont")
+      format("svg");
+}
+
+.geomanist-blk {
+  @include geomanist-blk;
+}
+
+.geomanist-blk-italic {
+  @include geomanist-blk-italic;
+}
+
+.geomanist-bold-italic {
+  @include geomanist-bold-italic;
+}
+
+.geomanist-bold {
+  @include geomanist-bold;
+}
+
+.geomanist-book-italic {
+  @include geomanist-book-italic;
+}
+
+.geomanist-book {
+  @include geomanist-book;
+}
+
+.geomanist-extra-light-italic {
+  @include geomanist-extra-light-italic;
+}
+
+.geomanist-extra-light {
+  @include geomanist-extra-light;
+}
+
+.geomanist-light {
+  @include geomanist-light;
+}
+
+.geomanist-light-italic {
+  @include geomanist-light-italic;
+}
+
+.geomanist-medium {
+  @include geomanist-medium;
+}
+
+.geomanist-medium-italic {
+  @include geomanist-medium-italic;
+}
+
+.geomanist-regular-italic {
+  @include geomanist-regular-italic;
+}
+
+.geomanist-thin {
+  @include geomanist-thin;
+}
+
+.geomanist-thin-italic {
+  @include geomanist-thin-italic;
+}
+
+.geomanist-ultra {
+  @include geomanist-ultra;
+}
+
+.geomanist-ultra-italic {
+  @include geomanist-ultra-italic;
+}

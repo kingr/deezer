@@ -1,0 +1,102 @@
+%c-dashboard-shared {
+  padding: 0px;
+  @include r(1024) {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+}
+
+.ant-card-meta-avatar {
+  float: right;
+  padding-right: 0px;
+  padding-left: 16px;
+}
+
+.ant-card-meta-description {
+  color: $black-5;
+  @include geomanist-regular;
+  font-size: $body1;
+  letter-spacing: 0px;
+  line-height: 22px;
+}
+
+.ant-card-meta-title {
+  color: $black-2;
+  @include geomanist-medium;
+  font-size: $body3;
+  letter-spacing: 0px;
+}
+
+.ant-avatar {
+  width: auto;
+  height: auto;
+}
+
+.c-dashboard {
+  @extend %c-dashboard-shared;
+
+  &--mt-45 {
+    @extend %c-dashboard-shared;
+    @include r(1024) {
+      margin-top: 45px;
+    }
+  }
+
+  &--mb-30 {
+    margin-bottom: 30px;
+    @include r(1024) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &--mt-0 {
+    margin-top: 0;
+  }
+
+  .ant-tag {
+    margin-top: 10px;
+    margin-bottom: 16px;
+  }
+
+  &.x-flow {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    border-width: 0;
+    padding-bottom: 30px;
+    margin-left: 24px;
+
+    @include r(768) {
+      margin: 0 24px 40px 24px;
+      justify-content: space-between;
+      border: 1px solid $white5;
+      padding: 30px;
+      overflow: hidden;
+    }
+
+    @include r(1024) {
+      width: calc(100% - 48px);
+      margin: 0 auto;
+    }
+
+    > div {
+      margin-right: 14px;
+
+      &:last-child {
+        padding-right: 24px;
+
+        @include r(768) {
+          padding-right: 0;
+        }
+      }
+
+      @include r(768) {
+        width: calc(50% - 15px);
+      }
+    }
+
+    .ant-skeleton {
+      display: unset;
+    }
+  }
+}

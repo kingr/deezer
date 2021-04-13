@@ -1,0 +1,151 @@
+.logout-container {
+  flex-direction: column-reverse;
+  display: flex;
+  background: rgba($login-bg, 0.15);
+  min-height: 100vh;
+  @include r(1024) {
+    flex-direction: row;
+    padding: 0;
+  }
+}
+
+.brand {
+  width: 100%;
+  height: 100%;
+  padding: 16px 30px;
+  padding-right: 0;
+  text-align: left;
+
+  @include r(1024) {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 40px;
+  }
+
+  .ant-tabs {
+    width: 100%;
+    line-height: inherit;
+    @include r(1024) {
+      margin-top: 20%;
+    }
+    .ant-tabs-bar {
+      border-color: rgba($black, 0.12);
+      margin-right: 30px;
+      @include r(1024) {
+        margin: 0 0 24px 0;
+      }
+    }
+  }
+
+  .ant-tabs-nav .ant-tabs-tab-active {
+    @include geomanist-book;
+  }
+
+  .ant-tabs-tab {
+    font-size: $body2;
+  }
+
+  &-image {
+    padding: 5px;
+    width: 88px;
+    height: auto;
+    display: none;
+
+    @include r(1024) {
+      width: 150px;
+      display: block;
+      position: absolute;
+      left: 35px;
+      top: 30px;
+    }
+  }
+
+  .xscroll {
+    overflow-x: scroll;
+    @include r(1024) {
+      overflow-x: hidden;
+    }
+
+    > div {
+      margin-right: 16px;
+
+      &:last-child {
+        padding-right: 24px;
+      }
+    }
+  }
+}
+
+.signout {
+  flex: auto;
+  width: 100%;
+  background: $white;
+  border-radius: 4px;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+
+  @include r(1024) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 136px;
+    border-radius: 0px 0px 0px 80px;
+    margin-bottom: 0px;
+    border: 1px solid $white5;
+  }
+
+  &__logo {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin-bottom: 30px;
+    @include r(1024) {
+      display: none;
+    }
+  }
+
+  &__image {
+    padding: 5px;
+    width: 150px;
+    height: auto;
+    margin-bottom: 8px;
+
+    @include r(1024) {
+      width: auto;
+      margin-left: 20px;
+      padding: 30px 0;
+    }
+  }
+
+  &__content {
+    @include r(1024) {
+      text-align: left;
+    }
+
+    &__heading {
+      color: $black-2;
+      @include geomanist-bold;
+      margin-bottom: 12px;
+      font-size: 36px;
+      @include r(1024) {
+        font-size: 48px;
+      }
+    }
+
+    &__text {
+      @include geomanist-regular;
+      display: block;
+      color: $black-5;
+      font-size: $font-size-base;
+      letter-spacing: 0px;
+      line-height: 22px;
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
+  }
+}

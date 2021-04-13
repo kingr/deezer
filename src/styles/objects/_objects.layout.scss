@@ -1,0 +1,175 @@
+.body-content {
+  display: flex;
+  flex-direction: row;
+}
+
+%page-content-shared {
+  width: 100%;
+  padding: 24px;
+}
+
+.page-content {
+  @extend %page-content-shared;
+  margin-bottom: 50px;
+
+  &--side-padding-only {
+    padding: 0 24px;
+    margin: 0;
+  }
+
+  &--no-bottom-space {
+    @extend %page-content-shared;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  @include r(1024) {
+    margin-bottom: 0;
+    padding: 65px 40px 40px 40px;
+  }
+}
+
+.ant-layout {
+  background: transparent;
+}
+
+.ant-menu-submenu > .ant-menu {
+  background-color: transparent;
+}
+
+.ant-layout-footer {
+  display: flex;
+  justify-content: center;
+  background-color: $white;
+  padding: 40px;
+  text-align: center;
+}
+
+.ant-layout-header {
+  height: auto;
+  line-height: normal;
+  display: flex;
+  background: $layout-header-background;
+  justify-content: space-between;
+  padding: 21px 16px 0 16px;
+  align-items: baseline;
+
+  @include r(1024) {
+    padding: 0 24px;
+    height: 72px;
+    align-items: center;
+    box-shadow: 0 2px 4px 0 rgba($black, 0.27);
+    z-index: 1;
+  }
+
+  &__left {
+    @include r(1024) {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+    &__link {
+      height: 30px;
+      &__logo {
+        width: 120px;
+        @include r(1024) {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  &__right {
+    .action-icons-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      @include r(1024) {
+        align-items: center;
+        svg {
+          font-size: $body5;
+        }
+      }
+    }
+  }
+}
+
+.login-wrapper {
+  box-shadow: 0 0 20px 0 rgba($black, 0.2);
+  max-width: 550px;
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.social-logins {
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-layout.ant-layout-has-sider {
+  @include r(1024) {
+    flex-direction: row;
+  }
+  flex-direction: column;
+}
+
+.ant-layout-sider {
+  background: $white;
+  display: none;
+  @include r(1024) {
+    padding: 20px;
+    display: block;
+  }
+}
+
+.header {
+  &__desktop-nav {
+    display: none;
+
+    @include r(1024) {
+      display: block;
+      align-self: flex-end;
+      position: relative;
+      height: 100%;
+    }
+  }
+  .left-elements {
+    a.link {
+    }
+  }
+}
+
+@include mobile() {
+  .sticky {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    transition: transform 0.4s;
+  }
+
+  .scrolling {
+    &-up {
+      .sticky {
+        transform: none;
+      }
+    }
+    &-down {
+      .sticky {
+        transform: translate3d(0, -100%, 0);
+      }
+    }
+  }
+}
+
+.loader-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  &.full-page {
+    height: 100vh;
+  }
+}

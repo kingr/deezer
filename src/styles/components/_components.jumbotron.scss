@@ -1,0 +1,216 @@
+%jumbtronDefault {
+  display: flex;
+  background: $blue-5;
+  border-radius: 4px;
+}
+
+.jumbotron-interactive {
+  padding: $body3;
+  @extend %jumbtronDefault;
+  flex-direction: column;
+
+  @include r(1280) {
+    height: 220px;
+    padding: 0 100px 20px 0;
+  }
+
+  &__section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include r(1280) {
+      justify-content: normal;
+    }
+
+    &__copy {
+      display: flex;
+      flex-direction: column;
+      width: 66%;
+      margin-bottom: $body3;
+
+      @include r(1280) {
+        order: 1;
+        width: auto;
+        margin: 40px 0 0 0;
+      }
+
+      @include r(1280) {
+        margin-left: 60px;
+      }
+
+      &__title {
+        @include geomanist-medium;
+        font-size: $body-18;
+        margin-bottom: 12px;
+        color: $black;
+
+        @include r(1280) {
+          font-size: 32px;
+        }
+      }
+
+      &__desc {
+        line-height: 22px;
+        color: $black;
+
+        @include r(1280) {
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    &__img-parent {
+      width: 88px;
+      @include r(1280) {
+        width: 235px;
+      }
+      &__img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__cta {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include r(1280) {
+      flex-direction: row;
+    }
+
+    button {
+      margin-bottom: 8px;
+      @include r(1280) {
+        margin: 0 8px 0 0;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include r(1280) {
+        display: flex;
+      }
+    }
+
+    &--dekstop {
+      @include r(1280) {
+        display: none;
+      }
+    }
+  }
+}
+
+.jumbotron {
+  @extend %jumbtronDefault;
+
+  @include r(1024) {
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 4px;
+  }
+
+  &--reverse {
+    flex-direction: column-reverse;
+    @include r(1024) {
+      flex-direction: row;
+    }
+  }
+
+  &--small {
+    padding: 16px;
+    @include r(1024) {
+      padding: 50px 131px;
+    }
+  }
+
+  &--large {
+    padding: 30px;
+    @include r(1024) {
+      padding: 70px 107px;
+    }
+  }
+
+  &__title {
+    color: $black;
+    @include geomanist-medium;
+    letter-spacing: 0px;
+    margin-bottom: 15px;
+
+    &--fontSmall {
+      font-size: $body3;
+      @include r(1024) {
+        font-size: $h2-desktop;
+      }
+    }
+
+    &--fontLarge {
+      font-size: $h1-desktop - 10;
+      @include r(1024) {
+        font-size: $h2;
+      }
+    }
+  }
+
+  &__desc {
+    color: $black-2;
+    @include geomanist-regular;
+    letter-spacing: 0px;
+    line-height: 22px;
+
+    @include r(1024) {
+      line-height: 29px;
+    }
+
+    &--descSmall {
+      font-size: $body1;
+      @include r(1024) {
+        font-size: $body2;
+      }
+    }
+
+    &--descLarge {
+      font-size: $body2;
+      margin-bottom: $body3;
+      @include r(1024) {
+        font-size: $h5;
+      }
+    }
+
+    &--orange {
+      color: $orange-3;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    @include r(1024) {
+      width: inherit;
+    }
+  }
+
+  &__image {
+    height: 112px;
+    width: 140px;
+    margin-bottom: $body3;
+    @include r(1024) {
+      height: inherit;
+      width: inherit;
+      margin-bottom: 0px;
+    }
+    &--small {
+      height: 64.9px;
+      width: 96.58px;
+      @include r(1024) {
+        height: 129.8px;
+        width: 193.16px;
+      }
+    }
+  }
+}

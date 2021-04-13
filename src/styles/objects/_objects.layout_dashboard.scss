@@ -1,0 +1,176 @@
+.o-dashboard {
+  &__title {
+    @include geomanist-medium;
+    font-size: $body2;
+    color: $black-2;
+    letter-spacing: 0px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+    @include r(1024) {
+      font-size: $body3;
+      margin-right: 0;
+    }
+    &--mb-8 {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__desc {
+    color: $black;
+    @include geomanist-regular;
+    font-size: $body2;
+    font-weight: normal;
+    letter-spacing: 0px;
+    line-height: 26px;
+  }
+
+  &__link {
+    @include geomanist-book;
+    display: block;
+    font-size: $body1;
+    letter-spacing: 0px;
+    line-height: 20px;
+    text-align: right;
+    margin-bottom: 20px;
+
+    &--left {
+      text-align: left;
+    }
+
+    &--right {
+      text-align: right;
+    }
+  }
+
+  &__mute {
+    color: $black-5;
+    @include geomanist-medium;
+    font-size: $body;
+    font-weight: 500;
+    letter-spacing: 0px;
+    line-height: 20px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .MuiSvgIcon-fontSizeSmall {
+      height: 14px;
+      width: 14px;
+      margin-right: 4px;
+    }
+  }
+
+  &__col {
+    &--one {
+      flex: 1;
+      @include r(1024) {
+        min-width: 438px;
+      }
+    }
+    &--two {
+      flex: 2;
+    }
+    &--halve {
+      flex: 1;
+      img {
+        width: 100%;
+        @include r(1024) {
+          width: inherit;
+          height: inherit;
+        }
+      }
+      .ant-card-body {
+        padding: 16px;
+        @include r(1024) {
+          padding: 30px;
+        }
+      }
+    }
+    &--full {
+      width: 100%;
+    }
+  }
+
+  &--mr-20 {
+    @include r(1024) {
+      margin-right: 20px;
+    }
+  }
+  &--mr-60 {
+    @include r(1024) {
+      margin-right: 60px;
+    }
+  }
+}
+
+%between-shared {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.o-row {
+  display: block;
+  @include r(1024) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &--bordered {
+    border-radius: 4px;
+    border: 1px solid $white5;
+  }
+
+  &--h-center {
+    justify-content: center;
+  }
+  &--v-center {
+    align-items: center;
+  }
+
+  &--p-30 {
+    padding: 16px;
+    @include r(1024) {
+      padding: 30px;
+    }
+  }
+
+  &--between {
+    @extend %between-shared;
+
+    &--padding {
+      @extend %between-shared;
+      padding: 0 24px;
+      @include r(1024) {
+        width: 1080px;
+        margin: 0 auto;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.o-row-tools {
+  display: flex;
+  flex-direction: column;
+
+  @include r(1024) {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  > div {
+    margin-bottom: 30px;
+
+    @include r(1024) {
+      margin-bottom: 0;
+      width: calc(50% - 15px);
+    }
+  }
+}

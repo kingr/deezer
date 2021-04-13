@@ -1,0 +1,272 @@
+@mixin geomanist-blk {
+  font-family: "Geomanist-Black", Arial, sans-serif;
+}
+
+@mixin geomanist-blk-italic {
+  font-family: "Geomanist-Black-Italic", Arial, sans-serif;
+}
+
+@mixin geomanist-regular {
+  font-family: "Geomanist-Regular", Arial, sans-serif;
+}
+
+@mixin geomanist-bold-italic {
+  font-family: "Geomanist-Bold-Italic", Arial, sans-serif;
+}
+
+@mixin geomanist-bold {
+  font-family: "Geomanist-Bold", Arial, sans-serif;
+}
+
+@mixin geomanist-book-italic {
+  font-family: "Geomanist-Book-Italic", Arial, sans-serif;
+}
+
+@mixin geomanist-book {
+  font-family: "Geomanist-Book", Arial, sans-serif;
+}
+
+@mixin geomanist-extra-light-italic {
+  font-family: "Geomanist-Extra-Light-Italic", Arial, sans-serif;
+}
+
+@mixin geomanist-extra-light {
+  font-family: "Geomanist-Extra-Light", Arial, sans-serif;
+}
+
+@mixin geomanist-light {
+  font-family: "Geomanist-Light", Arial, sans-serif;
+}
+
+@mixin geomanist-light-italic {
+  font-family: "Geomanist-Light-Italic", Arial, sans-serif;
+}
+
+@mixin geomanist-medium {
+  font-family: "Geomanist-Medium", Arial, sans-serif;
+}
+
+@mixin geomanist-medium-italic {
+  font-family: "Geomanist-Medium-Italic", Arial, sans-serif;
+}
+
+@mixin geomanist-regular-italic {
+  font-family: "Geomanist-Regular-Italic", Arial, sans-serif;
+}
+
+@mixin geomanist-thin {
+  font-family: "Geomanist-Thin", Arial, sans-serif;
+}
+
+@mixin geomanist-thin-italic {
+  font-family: "Geomanist-Thin-Italic", Arial, sans-serif;
+}
+
+@mixin geomanist-ultra {
+  font-family: "Geomanist-Ultra", Arial, sans-serif;
+}
+
+@mixin geomanist-ultra-italic {
+  font-family: "Geomanist-Ultra-Italic", Arial, sans-serif;
+}
+
+@mixin font-size($font-size) {
+  font-size: ($font-size);
+}
+
+@mixin pos-absolute($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+/**
+ * ReSass.
+ *
+ * MIXIN: Responsive Media Queries.
+ *
+ * Creates responsive media queries for seven different screen sizes.
+ * These are based on min-width which means if x is the size then your
+ * CSS will affect any device with screen width x and above.
+ *
+ * USAGE:
+ *	@include r(240)  { }
+ *	@include r(320)  { }
+ *	@include r(480)  { }
+ *	@include r(768)  { }
+ *	@include r(1024) { }
+ *	@include r(1140) { }
+ *	@include r(1280) { }
+ *  @include r(1500) { }
+ *
+ * CSS content goes inside {} brackets. These mixins should be used inside
+ * a class definition. For example:
+ *
+ * The following CSS will hide the .header on screen width 320px and above.
+ * .header {
+   * 	  @include r(320)  { display: none; }
+   * }
+   *
+   * @author  Ahmad Awais (https://github.com/ahmadawais)
+   * @link    https://github.com/ahmadawais/ReSass.git
+   * @version 1.0.0
+   */
+
+@mixin mobile() {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin smmobile() {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin r($point) {
+  @if $point==240 {
+    @media (min-width: 240px) {
+      @content;
+    }
+  }
+  @if $point==320 {
+    @media (min-width: 320px) {
+      @content;
+    }
+  }
+  @if $point==480 {
+    @media (min-width: 480px) {
+      @content;
+    }
+  }
+  @if $point==600 {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+  @if $point==768 {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $point==1024 {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+  @if $point==1109 {
+    @media (min-width: 1140px) {
+      @content;
+    }
+  }
+  @if $point==1140 {
+    @media (min-width: 1109px) {
+      @content;
+    }
+  }
+  @if $point==1280 {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+  @if $point==1366 {
+    @media (min-width: 1366px) {
+      @content;
+    }
+  }
+  @if $point==1440 {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+  @if $point==1550 {
+    @media (min-width: 1550px) {
+      @content;
+    }
+  }
+  @if $point==1920 {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  }
+}
+
+.header.false {
+  @include r(320) {
+    display: inherit;
+  }
+  @include r(1024) {
+    display: none;
+  }
+}
+
+// target specific browsers
+// http://aslanbakan.com/en/blog/browser-and-device-specific-css-styles-with-sass-and-less-mixins/
+// -----------------------------------
+
+//usage
+// "MSIE 11" "Android" "Android 4.0" "Android 4.1" "Android 4.3"
+// .btn-download {
+//   display: block;
+//   width: 100%;
+//   margin: 0 10px;
+//   @include browser(Android) {
+//     display: none;
+//   }
+// }
+
+@mixin browser($browsers: Mozilla) {
+  @each $browser in $browsers {
+    html[data-browser*="#{$browser}"] & {
+      @content;
+    }
+  }
+}
+
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+  -webkit-transition: $what $time $how;
+  -moz-transition: $what $time $how;
+  -ms-transition: $what $time $how;
+  -o-transition: $what $time $how;
+  transition: $what $time $how;
+}
+
+@mixin clearfix {
+  &::after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+
+@mixin btn-shadow {
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+    0px 6px 16px 0px rgba(0, 0, 0, 0.08), 0px 9px 28px 8px rgba(0, 0, 0, 0.05);
+}
+
+@mixin cargo_cult_multiline_elision(
+  $fontSize,
+  $lineHeight,
+  $lineHeightMobile,
+  $numLines
+) {
+  // Cargo culted from: https://codepen.io/martinwolf/pen/qlFdp
+  $line-height: $lineHeightMobile;
+  @include r(1024) {
+    $line-height: $lineHeight;
+  }
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-width: 400px;
+  height: $fontSize * $line-height * $numLines; /* Fallback for non-webkit */
+  font-size: $fontSize;
+  line-height: $line-height;
+  -webkit-line-clamp: $numLines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  // End cargo cult
+}

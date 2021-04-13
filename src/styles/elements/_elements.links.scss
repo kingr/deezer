@@ -1,0 +1,22 @@
+a {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.active-menu-item {
+    @include geomanist-bold;
+    color: $menu-active;
+  }
+
+  &.link {
+    &--primary {
+      text-decoration: none;
+      border-radius: 2px;
+      display: flex;
+      padding: 10px 15px;
+      background-color: $primary;
+      color: $white;
+    }
+  }
+}

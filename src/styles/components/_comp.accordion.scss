@@ -1,0 +1,14 @@
+.ant-collapse {
+  &.active-bottom-header-border {
+    & > .ant-collapse-item {
+      & > .ant-collapse-header::after {
+        background-color: $grey-6;
+        width: calc(100% + 20px);
+        position: relative;
+        left: -20px;
+        top: 2px;
+        height: 1px;
+      }
+    }
+  }
+}

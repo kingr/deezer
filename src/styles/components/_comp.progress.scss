@@ -1,0 +1,16 @@
+.progress-comp {
+  display: flex;
+  align-items: flex-start;
+
+  &__copy {
+    color: rgba($black, 0.47);
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+
+  &__cta > button {
+    max-height: 24px;
+    margin-left: 10px;
+  }
+}

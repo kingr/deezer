@@ -1,0 +1,20 @@
+.done-comp {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  > img {
+    margin: 35px 0 30px 0;
+    width: 115px;
+
+    @include r(1024) {
+      width: 160px;
+    }
+  }
+
+  &__body-copy {
+    line-height: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
