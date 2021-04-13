@@ -29,9 +29,6 @@ exports.getArtists = function (req, res, next) {
           next();
         })
         .catch((e) => {
-          console.log(
-            "There has been a problem with your fetch operation: " + e.message
-          );
           return res
             .status(400)
             .send(
@@ -42,7 +39,6 @@ exports.getArtists = function (req, res, next) {
       return res.status(400).send("query parameter missing");
     }
   } catch (e) {
-    console.log("failed to get artists", e);
     return res.status(400).send("failed to get artists");
   }
 };
@@ -65,7 +61,6 @@ exports.getArtistFanCount = function (req, res) {
       .then((artists) => res.send(artists))
       .catch((e) => console.log(e));
   } catch (e) {
-    console.log("failed to get get artist fan count", e);
     return res.status(400).send("failed to get artists");
   }
 };
