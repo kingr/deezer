@@ -13,7 +13,7 @@ app.use("/api/artist", artistApi);
 
 app.use("/public", express.static("../dist"));
 
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../", "index.html"));
 });
 
