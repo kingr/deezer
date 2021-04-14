@@ -1,104 +1,11 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
+html * {
+  font-family: "Arial", Helvetica, sans-serif;
+}
+
+body {
+  background-color: gray;
 }
 
 p {
   font-size: $body1;
-
-  &.medium {
-    font-size: $body2;
-
-    &--muted {
-      color: rgba($black, 0.47);
-    }
-  }
-}
-
-.date-picker {
-  width: 100%;
-}
-
-.profile-section .action-buttons-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 15px;
-}
-
-.footer-buttons {
-  position: "absolute";
-  right: 0;
-  bottom: 0;
-  width: "100%";
-  border-top: "1px solid #e9e9e9";
-  padding: "10px 16px";
-  background: "#fff";
-  text-align: "right";
-}
-
-.profile-read-only {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.profile-page {
-  @include r(1024) {
-    width: 500px;
-    margin: 0 auto;
-  }
-
-  .profile-section-heading {
-    font-size: 24px;
-    @include r(1024) {
-      padding-bottom: 18px;
-      padding-top: 18px;
-    }
-  }
-
-  .profile-section {
-    @include r(1024) {
-      padding-bottom: 18px;
-      padding-top: 18px;
-    }
-    color: rgba(0, 0, 0, 0.47);
-    border-bottom: 1px solid #e0e0e0;
-    padding: 20px 37px 5px 32px;
-    flex: 2;
-    font-size: $font-size-base;
-    font-weight: normal;
-    letter-spacing: 0;
-    line-height: 22px;
-
-    &.active {
-      background: rgba($input-section-hover, 0.45);
-      opacity: 1;
-    }
-    &:hover {
-      background: rgba($input-section-hover, 0.45);
-      opacity: 1;
-    }
-
-    &.inactive {
-      opacity: 0.2;
-    }
-
-    .profile-label {
-      @include geomanist-book;
-      width: 50%;
-    }
-
-    .profile-value {
-      @include geomanist-regular;
-      font-weight: normal;
-      width: 50%;
-    }
-  }
-  .edit-icon {
-    vertical-align: -2px;
-    margin-right: 5px;
-    height: 16px;
-    width: 16px;
-  }
 }

@@ -1,5 +1,7 @@
 import Immutable from "seamless-immutable";
 
+import { SET_SEARCH_LOADING, SET_SEARCH_RESULTS } from "../actions/search";
+
 export const INITIAL_STATE = Immutable({
   isSearchLoading: false,
   results: [],
@@ -11,19 +13,16 @@ export default function user(state: any = INITIAL_STATE, action: any) {
   }
 
   switch (action.type) {
-    // case types.RECORD_DONT_HAVE_CHECKED:
-    case "types.RECORD_DONT_HAVE_CHECKED":
+    case SET_SEARCH_LOADING:
       return {
         ...state,
-        profileClientFieldsForm: {
-          ...state.profileClientFieldsForm,
-          [action.payload.id]: {
-            ...state.profileClientFieldsForm[action.payload.id],
-            isDontHaveLoading: action.payload.loading,
-            isDontHaveChecked: action.payload.checked,
-            values: [],
-          },
-        },
+        isSearchLoading: action.payload,
+      };
+    case SET_SEARCH_RESULTS:
+      return {
+        ...state,
+        isSearchLoading: action.payload.loading,
+        results: action.payload.results,
       };
 
     default:

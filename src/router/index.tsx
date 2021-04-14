@@ -7,6 +7,7 @@ import createReducer from "../store/reducers";
 import SearchPage from "../pages/Search";
 import ArtistPage from "../pages/Artist";
 import { createBrowserHistory } from "history";
+import rootSaga from "../store/sagas";
 
 const history = createBrowserHistory();
 
@@ -26,6 +27,8 @@ export const store: any = createStore(
   createReducer,
   composeEnhancers(applyMiddleware(sagaMiddleware))
 );
+
+sagaMiddleware.run(rootSaga);
 
 const RouterWrapper = () => {
   return (

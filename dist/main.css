@@ -1,49 +1,3 @@
-.color--black {
-  color: rgba(0, 0, 0, 0.87);
-}
-
-/**
- * ReSass.
- *
- * MIXIN: Responsive Media Queries.
- *
- * Creates responsive media queries for seven different screen sizes.
- * These are based on min-width which means if x is the size then your
- * CSS will affect any device with screen width x and above.
- *
- * USAGE:
- *	@include r(240)  { }
- *	@include r(320)  { }
- *	@include r(480)  { }
- *	@include r(768)  { }
- *	@include r(1024) { }
- *	@include r(1140) { }
- *	@include r(1280) { }
- *  @include r(1500) { }
- *
- * CSS content goes inside {} brackets. These mixins should be used inside
- * a class definition. For example:
- *
- * The following CSS will hide the .header on screen width 320px and above.
- * .header {
-   * 	  @include r(320)  { display: none; }
-   * }
-   *
-   * @author  Ahmad Awais (https://github.com/ahmadawais)
-   * @link    https://github.com/ahmadawais/ReSass.git
-   * @version 1.0.0
-   */
-@media (min-width: 320px) {
-  .header.false {
-    display: inherit;
-  }
-}
-@media (min-width: 1024px) {
-  .header.false {
-    display: none;
-  }
-}
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -179,6 +133,52 @@ table {
   border-spacing: 0;
 }
 
+.color--black {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/**
+ * ReSass.
+ *
+ * MIXIN: Responsive Media Queries.
+ *
+ * Creates responsive media queries for seven different screen sizes.
+ * These are based on min-width which means if x is the size then your
+ * CSS will affect any device with screen width x and above.
+ *
+ * USAGE:
+ *	@include r(240)  { }
+ *	@include r(320)  { }
+ *	@include r(480)  { }
+ *	@include r(768)  { }
+ *	@include r(1024) { }
+ *	@include r(1140) { }
+ *	@include r(1280) { }
+ *  @include r(1500) { }
+ *
+ * CSS content goes inside {} brackets. These mixins should be used inside
+ * a class definition. For example:
+ *
+ * The following CSS will hide the .header on screen width 320px and above.
+ * .header {
+   * 	  @include r(320)  { display: none; }
+   * }
+   *
+   * @author  Ahmad Awais (https://github.com/ahmadawais)
+   * @link    https://github.com/ahmadawais/ReSass.git
+   * @version 1.0.0
+   */
+@media (min-width: 320px) {
+  .header.false {
+    display: inherit;
+  }
+}
+@media (min-width: 1024px) {
+  .header.false {
+    display: none;
+  }
+}
+
 h1 {
   font-family: "Geomanist-Bold", Arial, sans-serif;
   font-size: 30px;
@@ -221,11 +221,86 @@ h6 {
   font-size: 12px;
 }
 
+html * {
+  font-family: "Arial", Helvetica, sans-serif;
+}
+
+body {
+  background-color: gray;
+}
+
+p {
+  font-size: 14px;
+}
+
 .search-bar {
-  height: 60px;
+  height: 50px;
   display: flex;
   background-color: royalblue;
-  box-shadow: 0px 0px 10p black;
+  box-shadow: 0px 0px 10px black;
+  align-items: center;
+  padding: 20px 30px;
+}
+.search-bar input {
+  color: white;
+  padding: 10px;
+}
+.search-bar input::after {
+  content: "";
+}
+.search-bar .MuiInputAdornment-root {
+  margin-top: 0 !important;
+}
+.search-bar .MuiCircularProgress-root {
+  width: 30px !important;
+  height: 30px !important;
+  margin-left: 15px;
+}
+
+.search-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-deezer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 40px;
+  width: 250px;
+  align-self: center;
+  margin-top: 100px;
+}
+
+.search-results-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px;
+}
+.search-results-wrapper .search-result {
+  display: flex;
+  width: 320px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.search-results-wrapper .search-result a {
+  text-decoration: none;
+}
+.search-results-wrapper .search-result p {
+  color: white;
+}
+.search-results-wrapper .search-result p.artist {
+  font-size: 18px;
+  padding: 10px;
+}
+.search-results-wrapper .search-result p.fans {
+  font-size: 14px;
+  padding: 0 0 10px 10px;
+}
+.search-results-wrapper .search-result img {
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
