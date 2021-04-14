@@ -1,5 +1,4 @@
 import Immutable from "seamless-immutable";
-
 import { SET_SEARCH_LOADING, SET_SEARCH_RESULTS } from "../actions/search";
 
 export const INITIAL_STATE = Immutable({

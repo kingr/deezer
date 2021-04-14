@@ -1,0 +1,61 @@
+.artist-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  .top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .artist-hero-wrapper {
+    background-color: rgba(0, 0, 0, 0.2);
+
+    img {
+      max-width: 220px;
+    }
+    .artist-hero {
+      p {
+        color: white;
+        &.artist {
+          font-size: 18px;
+          padding: 10px;
+        }
+        &.fans {
+          font-size: 14px;
+          padding: 0 0 10px 10px;
+        }
+      }
+    }
+  }
+
+  .tracks {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+
+    .title {
+      font-size: 22px;
+    }
+
+    li {
+      margin: 5px;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .albums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .album {
+      margin-bottom: 30px;
+      width: 320px;
+      p {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

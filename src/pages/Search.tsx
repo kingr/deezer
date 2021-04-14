@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
 import SearchBar from "../components/SearchBar";
 import SearchResult from "../components/SearchResult";
 

@@ -2,27 +2,24 @@ import React from "react";
 import { Link } from "react-router-dom";
 import numeral from "numeral";
 
-type SearchResultType = {
+type ArtistHeroType = {
   data: {
-    id: number;
     nb_fan: number;
     name: string;
     picture_xl: string;
   };
 };
 
-const SearchResult = ({
-  data: { id, nb_fan, name, picture_xl },
-}: SearchResultType) => {
+const ArtistHero = ({ data: { nb_fan, name, picture_xl } }: ArtistHeroType) => {
   return (
-    <div className="search-result">
-      <Link to={`/${id}/${name}`}>
-        <img src={picture_xl} alt={name} />
+    <div className="artist-hero-wrapper">
+      <img src={picture_xl} alt={name} />
+      <div className="artist-hero">
         <p className="artist">{name}</p>
         <p className="fans">Fans: {numeral(nb_fan).format("0 a")}</p>
-      </Link>
+      </div>
     </div>
   );
 };
 
-export default SearchResult;
+export default ArtistHero;

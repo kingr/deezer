@@ -180,7 +180,6 @@ table {
 }
 
 h1 {
-  font-family: "Geomanist-Bold", Arial, sans-serif;
   font-size: 30px;
 }
 @media (min-width: 1024px) {
@@ -192,6 +191,7 @@ h1 {
 h2 {
   font-family: "Geomanist-Medium", Arial, sans-serif;
   font-size: 20px;
+  color: black !important;
 }
 @media (min-width: 1024px) {
   h2 {
@@ -199,30 +199,9 @@ h2 {
   }
 }
 
-h3 {
-  font-family: "Geomanist-Medium", Arial, sans-serif;
-  font-size: 22px;
-}
-@media (min-width: 1024px) {
-  h3 {
-    font-size: 24px;
-  }
-}
-
-h4 {
-  font-size: 20px;
-}
-
-h5 {
-  font-size: 18px;
-}
-
-h6 {
-  font-size: 12px;
-}
-
 html * {
   font-family: "Arial", Helvetica, sans-serif;
+  color: white;
 }
 
 body {
@@ -301,6 +280,59 @@ p {
 }
 .search-results-wrapper .search-result img {
   max-width: 100%;
+}
+
+.artist-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.artist-details .top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+.artist-details .artist-hero-wrapper {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.artist-details .artist-hero-wrapper img {
+  max-width: 220px;
+}
+.artist-details .artist-hero-wrapper .artist-hero p {
+  color: white;
+}
+.artist-details .artist-hero-wrapper .artist-hero p.artist {
+  font-size: 18px;
+  padding: 10px;
+}
+.artist-details .artist-hero-wrapper .artist-hero p.fans {
+  font-size: 14px;
+  padding: 0 0 10px 10px;
+}
+.artist-details .tracks {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+.artist-details .tracks .title {
+  font-size: 22px;
+}
+.artist-details .tracks li {
+  margin: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.artist-details .albums {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.artist-details .albums .album {
+  margin-bottom: 30px;
+  width: 320px;
+}
+.artist-details .albums .album p {
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

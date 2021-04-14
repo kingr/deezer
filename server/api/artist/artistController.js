@@ -27,6 +27,7 @@ exports.getArtistDetails = function (req, res, next) {
 
         const { data: tracks } = await topTracks.json();
         const { data: albums } = await allAlbums.json();
+
         const { name, picture_xl, nb_fan } = await artist.json();
 
         return { name, picture_xl, nb_fan, tracks, albums };

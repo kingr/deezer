@@ -1,5 +1,4 @@
 h1 {
-  @include geomanist-bold;
   @include font-size($h1-mobile);
   @include r(1024) {
     @include font-size($h1-desktop);
@@ -12,24 +11,5 @@ h2 {
   @include r(1024) {
     @include font-size($h2-desktop);
   }
-}
-
-h3 {
-  @include geomanist-medium;
-  @include font-size($h3-mobile);
-  @include r(1024) {
-    @include font-size($h3);
-  }
-}
-
-h4 {
-  @include font-size($h4);
-}
-
-h5 {
-  @include font-size($h5);
-}
-
-h6 {
-  @include font-size($h6);
+  color: $black !important;
 }

@@ -16,5 +16,20 @@ const rootSaga = function* handleNewMessage() {
       console.log("api failed", e);
     }
   });
+  yield takeEvery(
+    artistActions.FETCH_ARTIST,
+    function* ({ payload: { id, artist } }: any) {
+      try {
+        yield put({ type: artistActions.SET_ARTIST_LOADING, payload: true });
+        const results: {} = yield call(api.getArtist, id, artist);
+        yield put({
+          type: artistActions.SET_ARTIST_RESULTS,
+          payload: { results, loading: false },
+        });
+      } catch (e) {
+        console.log("api failed", e);
+      }
+    }
+  );
 };
 export default rootSaga;
